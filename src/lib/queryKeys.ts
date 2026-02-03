@@ -146,6 +146,13 @@ export const queryKeys = {
   },
 
   // ─────────────────────────────────────────────────────────────────────────────
+  // Custom Templates
+  // ─────────────────────────────────────────────────────────────────────────────
+  customTemplates: {
+    all: ["custom-templates"] as const,
+  },
+
+  // ─────────────────────────────────────────────────────────────────────────────
   // Prompts
   // ─────────────────────────────────────────────────────────────────────────────
   prompts: {
@@ -286,6 +293,9 @@ export type AppQueryKey =
       (typeof queryKeys.customThemes)[keyof typeof queryKeys.customThemes]
     >
   | QueryKeyOf<(typeof queryKeys.templates)[keyof typeof queryKeys.templates]>
+  | QueryKeyOf<
+      (typeof queryKeys.customTemplates)[keyof typeof queryKeys.customTemplates]
+    >
   | QueryKeyOf<(typeof queryKeys.prompts)[keyof typeof queryKeys.prompts]>
   | QueryKeyOf<(typeof queryKeys.agentTools)[keyof typeof queryKeys.agentTools]>
   | QueryKeyOf<
