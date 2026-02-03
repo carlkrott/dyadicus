@@ -17,6 +17,7 @@ import type { ZoomLevel } from "@/lib/schemas";
 import { selectedComponentsPreviewAtom } from "@/atoms/previewAtoms";
 import { chatInputValueAtom } from "@/atoms/chatAtoms";
 import { usePlanEvents } from "@/hooks/usePlanEvents";
+import i18n from "@/i18n";
 
 const DEFAULT_ZOOM_LEVEL: ZoomLevel = "100";
 
@@ -60,6 +61,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
     return () => {};
   }, [settings?.zoomLevel]);
+
+  // Sync i18n language with persisted user setting
+  useEffect(() => {
+    const language = settings?.language ?? "en";
+    if (i18n.language !== language) {
+      i18n.changeLanguage(language);
+    }
+  }, [settings?.language]);
+
   // Global keyboard listener for refresh events
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
