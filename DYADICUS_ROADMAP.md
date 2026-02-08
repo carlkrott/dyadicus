@@ -73,24 +73,28 @@ Dyad uses two approaches:
 
 ## Enhancement Roadmap
 
-### Phase 1: Foundation (Week 1)
+### Phase 1: Foundation (Week 1) ✅
 - [x] Fork repository
 - [x] Set up development environment
-- [ ] Install dependencies (`npm install`)
-- [ ] Create userData directory
-- [ ] Run locally (`npm start`)
-- [ ] Verify build works
-- [ ] Create `dyadicus` branch for our changes
+- [x] Install dependencies (`npm install`)
+- [x] Create userData directory
+- [x] Run locally (`npm start`)
+- [x] Verify build works
+- [x] Create `dyadicus` branch for our changes → `feature/dyadicus-branding`
 
-### Phase 2: Branding & Theme (Week 2)
-- [ ] Update app name to "DyadICUS"
-- [ ] Apply our design system colors (Red theme from PENPOT_DYADICUS_MOCKUP.md)
-  - Primary: `#D62828` (Red)
-  - Secondary: `#2C2C34` (Dark)
-  - Accent: `#F77F00` (Orange)
-- [ ] Replace logo/icons
-- [ ] Update window title
-- [ ] Test build with new branding
+### Phase 2: Branding & Theme (Week 2) ✅ COMPLETE
+- [x] Update app name to "DyadICUS" (package.json, productName)
+- [x] Apply our design system colors (Red theme)
+  - Primary: `#D62828` (Red) → oklch(0.52 0.20 27)
+  - Secondary: `#2C2C34` (Dark) → oklch(0.25 0.01 280)
+  - Accent: `#F77F00` (Orange) → oklch(0.72 0.18 55)
+- [x] Update protocol schemes (dyad → dyadicus)
+- [x] Update UI strings (13 files, 33 text changes)
+- [x] Light + dark mode themes applied
+- [x] TypeScript check passes
+- [ ] Replace logo/icons (pending - need logo assets)
+- **Branch:** `feature/dyadicus-branding`
+- **Commit:** 19b3940
 
 ### Phase 3: MCP Router Integration (Week 3)
 - [ ] Connect to our MCP Router backend API
