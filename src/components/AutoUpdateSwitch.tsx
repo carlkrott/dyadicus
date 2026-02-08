@@ -21,9 +21,9 @@ export function AutoUpdateSwitch() {
           updateSettings({ enableAutoUpdate: checked });
           toast("Auto-update settings changed", {
             description:
-              "You will need to restart Dyad for your settings to take effect.",
+              "You will need to restart DyadICUS for your settings to take effect.",
             action: {
-              label: "Restart Dyad",
+              label: "Restart DyadICUS",
               onClick: () => {
                 ipc.system.restartDyad();
               },

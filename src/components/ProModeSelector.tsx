@@ -89,7 +89,7 @@ export function ProModeSelector() {
                 onClick={() => {
                   ipc.system.openExternalUrl("https://dyad.sh/pro#ai");
                 }}
-                title="Visit dyad.sh/pro to unlock Pro features"
+                title="Visit dyadicus for Pro to unlock Pro features"
               >
                 Unlock Pro modes
               </a>

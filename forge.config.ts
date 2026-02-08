@@ -70,8 +70,8 @@ const config: ForgeConfig = {
     windowsSign: isWindowsSigningEnabled ? windowsSign : undefined,
     protocols: [
       {
-        name: "Dyad",
-        schemes: ["dyad"],
+        name: "DyadICUS",
+        schemes: ["dyadicus"],
       },
     ],
     icon: "./assets/icon/logo",
@@ -127,7 +127,7 @@ const config: ForgeConfig = {
     }),
     new MakerDeb({
       options: {
-        mimeType: ["x-scheme-handler/dyad"],
+        mimeType: ["x-scheme-handler/dyadicus"],
         icon: "./assets/icon/logo.png",
       },
     }),
@@ -136,18 +136,19 @@ const config: ForgeConfig = {
     }),
   ],
   publishers: [
-    {
-      name: "@electron-forge/publisher-github",
-      config: {
-        repository: {
-          owner: "dyad-sh",
-          name: "dyad",
-        },
-        draft: true,
-        force: true,
-        prerelease: true,
-      },
-    },
+    // TODO: Enable when ready for releases
+    // {
+    //   name: "@electron-forge/publisher-github",
+    //   config: {
+    //     repository: {
+    //       owner: "carlkrott",
+    //       name: "dyadicus",
+    //     },
+    //     draft: true,
+    //     force: true,
+    //     prerelease: true,
+    //   },
+    // },
   ],
   plugins: [
     new AutoUnpackNativesPlugin({}),

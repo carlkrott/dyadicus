@@ -300,7 +300,7 @@ export function ModelPicker() {
                 const provider = providers?.find((p) => p.id === providerId);
                 const providerDisplayName =
                   provider?.id === "auto"
-                    ? "Dyad Turbo"
+                    ? "DyadICUS Turbo"
                     : (provider?.name ?? providerId);
                 return (
                   <DropdownMenuSub key={providerId}>
